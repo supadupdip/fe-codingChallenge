@@ -59,7 +59,7 @@
                 var options = {};
                 return app.vars.searching = fetch(fetchUrl, options)
                     .then(res => {
-                        return res.json()               
+                        return res.json();               
                     }).then(data =>{
 
                         app.vars.lastSearchTerm = searchTerm;
@@ -111,9 +111,9 @@
         },
         showCompany:function(company){
             var node = document.createElement("div");
-            const lineBreak = function(){
+            var lineBreak = function(){
                 return document.createElement("br");
-            } 
+            }; 
             var image = document.createElement("img");
             image.src = company.avatarUrl;
             node.appendChild(image);
